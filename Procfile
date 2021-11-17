@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath marineproject marineproject.wsgi

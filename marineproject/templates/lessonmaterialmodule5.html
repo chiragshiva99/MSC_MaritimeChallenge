@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- https://bbbootstrap.com/snippets/login-form-information-text-67856111-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Learning Material</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body>
+{% include 'navbar.html' %} 
+    <div class="container px-4 py-5 mx-auto">
+        <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+                <div class="card card1">
+                    <div class="row justify-content-center my-auto">
+                        <div class="col-md-8 col-10 my-5">
+                            <!-- <div class="row justify-content-center px-3 mb-3"> <img id="logo"
+                                    src="https://people.sutd.edu.sg/~robert_simpson/wp-content/uploads/2020/04/cropped-actalab-logo.jpg">
+                            </div> -->
+                            <h3 class="mb-5 text-center heading">Add New Learning Material:</h3>
+                            <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %} {{ form.as_p }}
+                            <!-- <div class="form-group">
+                                <label class="form-control-label text-muted"><input type="checkbox" required="required"> I have rechecked the information to ensure that it is correct. </label>
+                            </div>   -->
+                            <div class="row justify-content-center my-3 px-3"> <button
+                                    class="btn-block btn-color" type="submit">Upload</button> 
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <div class="card card2">
+                    <div class="my-auto mx-md-5 px-md-5 right">
+                        <h3 class="text-white" style="text-align: center">Supplementary Resources
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+input,
+textarea {
+    background-color: #FFFFFF;
+    border-radius: 50px !important;
+    padding: 12px 15px 12px 15px !important;
+    width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    border: 1px solid #000000 !important;
+    font-size: 16px !important;
+    color: #000 !important;
+    font-weight: 400
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #17a2b8 !important;
+    outline-width: 0;
+    font-weight: 400
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.card {
+    border-radius: 0;
+    border: none
+}
+
+.card1 {
+    width: 50%;
+    padding: 40px 30px 10px 30px
+}
+
+.card2 {
+    width: 50%;
+    background-image: linear-gradient(to right, #17a2b8  ,#6c757d )
+}
+
+#logo {
+    width: 200px;
+    height: 100px;
+}
+
+.heading {
+    margin-bottom: 60px !important
+}
+
+::placeholder {
+    color: #000 !important;
+    opacity: 1
+}
+
+:-ms-input-placeholder {
+    color: #000 !important
+}
+
+::-ms-input-placeholder {
+    color: #000 !important
+}
+
+.form-control-label {
+    font-size: 12px;
+    margin-left: 15px
+}
+
+.msg-info {
+    padding-left: 15px;
+    margin-bottom: 30px
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: #fff;
+    background-color: #17a2b8;
+    padding: 15px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 40px
+}
+
+.btn-color:hover {
+    color: #fff;
+    background-color:grey;
+}
+
+.btn-white {
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 8px 40px;
+    cursor: pointer;
+    border: 2px solid #17a2b8 !important
+}
+
+.btn-white:hover {
+    color: #fff;
+    background-color: #17a2b8;
+}
+
+a {
+    color: #000
+}
+
+a:hover {
+    color: #000
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 50px !important
+}
+
+.sm-text {
+    font-size: 15px
+}
+
+@media screen and (max-width: 992px) {
+    .card1 {
+        width: 100%;
+        padding: 40px 30px 10px 30px
+    }
+
+    .card2 {
+        width: 100%
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important
+    }
+
+    .card2 {
+        padding: 50px
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important
+    }
+}
+</style>
+
+</html>
+

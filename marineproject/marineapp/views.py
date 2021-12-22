@@ -83,7 +83,6 @@ class HRDashboardView(TemplateView):
         return context
 
 
-
 class TraineeDashboardView(TemplateView):
     template_name = "traineedashboard.html"
 
@@ -102,10 +101,11 @@ class TrainerDashboardView(TemplateView):
 
         return context
 
+
 class DeleteRowView(TemplateView):
     template_name = "trainerdashboard.html"
 
-    def get(self,request,module,topic):
+    def get(self, request, module, topic):
         module = int(module)
         if module == 1:
             record = LessonMaterialModule1.objects.filter(pk=topic)
@@ -117,44 +117,9 @@ class DeleteRowView(TemplateView):
             record = LessonMaterialModule4.objects.filter(pk=topic)
         elif module == 5:
             record = LessonMaterialModule5.objects.filter(pk=topic)
-        
+
         record.delete()
         return redirect("marineapp:trainerdashboard")
-    
-    # def delrec(request, id):
-#     delrow = LessonMaterialModule1.objects.get(id=id)
-#     delrow.delete()
-#
-#     context['lesson1_list'] = LessonMaterialModule1.objects.all()
-
-# def delrec(request, id):
-#     delrow = LessonMaterialModule1.objects.get(id=id)
-#     delrow.delete()
-#     context['lesson1_list'] = LessonMaterialModule1.objects.all()
-
-
-# class Quiz1View(CreateView):
-#     template_name = "quiz1.html"
-#     form_class = Quiz1Form
-#     success_url = reverse_lazy("marineapp:trainerdashboard")
-
-#     def form_valid(self, form):
-#         return super().form_valid(form)
-
-
-# class Quiz1QuestionView(CreateView):
-#     template_name = "quiz1question.html"
-#     form_class = QuestionQuiz1Form
-#     second_form_class = AnswerQuiz1Form
-#     success_url = reverse_lazy("marineapp:trainerdashboard")
-
-#     def form_valid(self, form):
-#         return super().form_valid(form)
-
-# class Quiz1AnswerView(CreateView):
-#     template_name = "quiz1questionanswer.html"
-#     form_class = AnswerQuiz1Form
-#     success_url = reverse_lazy("marineapp:trainerdashboard")  ############
 
     def form_valid(self, form):
         return super().form_valid(form)
@@ -166,6 +131,7 @@ class MatchInstructionView(TemplateView):
 
 class HangmanInstructionView(TemplateView):
     template_name = "hangmaninstruction.html"
+
 
 class InsideShipView(TemplateView):
     template_name = "Inside_Ship.html"
@@ -258,7 +224,6 @@ class Module3LessonView(TemplateView):
         context['lesson3_list'] = LessonMaterialModule3.objects.all()
 
         return context
-
 
 
 class LessonMaterialModule4View(CreateView):

@@ -37,11 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'marineapp',  #APP NAME
-    'multiselectfield',  #DJANGO MULTISELECT FIELD
-    'verify_email.apps.VerifyEmailConfig',  #Email Verification
-    'django_email_verification',  # WORKSSSSSSSS YAY
-
+    'marineapp',
+    'multiselectfield',
+    # 'verify_email.apps.VerifyEmailConfig',
+    'django_email_verification',
     'quizes',
     'questions',
     'results',
@@ -81,11 +80,11 @@ WSGI_APPLICATION = 'marineproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = { 
-    'default': { 
-        'ENGINE': 'django.db.backends.sqlite3', 
-        'NAME': BASE_DIR / 'db.sqlite3', 
-    } 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -142,30 +141,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#pip install Django-Verify-Email
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = os.environ.get('EMAIL_ID')
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PW')
-
-# DEFAULT_FROM_EMAIL = 'noreply<no_reply@domain.com>'
-
-# EXPIRE_AFTER = "2m"  #expired verification email
-
-# HTML_MESSAGE_TEMPLATE = "email_message.html"
-# VERIFICATION_SUCCESS_TEMPLATE = "email_message_success.html"
-# VERIFICATION_FAILED_TEMPLATE = "email_message_failed.html"
-
-# SUBJECT = 'subject of email'  # default subject is : Email Verification Mail
-
-# LOGIN_URL = 'login.html'  #name of your login pattern
-# # Note: This variable is also used by django.
-
 
 # ___________________________________________________________________________
-# email verification attempt 2
+# email verification
 def verified_callback(user):
     user.is_active = True
 
@@ -175,10 +153,10 @@ EMAIL_VERIFIED_CALLBACK = verified_callback
 EMAIL_ACTIVE_FIELD = 'is_active'
 EMAIL_SERVER = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_ADDRESS = 'camps.sutdactalab@gmail.com'
+EMAIL_ADDRESS = ''  #EMAIL ID
 EMAIL_FROM_ADDRESS = 'noreply@MSCMaritimeaddress.com'
 EMAIL_USE_TLS = True
-EMAIL_PASSWORD = 'kenwxmuebsgwdkes'  # os.environ['password_key'] suggested
+EMAIL_PASSWORD = ''  #TYPE PASSWORD
 EMAIL_MAIL_SUBJECT = 'Confirm your Email'
 EMAIL_MAIL_HTML = 'mail_body.html'
 EMAIL_MAIL_PLAIN = 'mail_body.txt'

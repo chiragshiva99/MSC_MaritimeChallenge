@@ -6,7 +6,6 @@ from . import views
 
 app_name = "marineapp"
 urlpatterns = [
-    #     path("", HomeView.as_view(), name="home"),
     path("signup/", SignUpView.as_view(), name="signup"),
     path("", LogInView.as_view(), name="login"),
     path("logout/", LogOutView.as_view(), name="logout"),
@@ -23,13 +22,6 @@ urlpatterns = [
     path("maindashboard/trainerdashboard/",
          TrainerDashboardView.as_view(),
          name="trainerdashboard"),
-    ###
-#     path("quiz1/", Quiz1View.as_view(), name="quiz1form"),
-    #     path("quiz1question/",
-    #          Quiz1QuestionView.as_view(),
-    #          name="quiz1questionform"),
-    #     path("quiz1answers/", Quiz1AnswerView.as_view(), name="quiz1formanswers"),
-    #####
     path("maindashboard/virtual-tour/",
          VirtualTourView.as_view(),
          name="virtualtour"),
@@ -66,6 +58,7 @@ urlpatterns = [
          LessonMaterialModule5View.as_view(),
          name="lessonmaterialmodule5"),
     path("engine-room/", EngineRoomView.as_view(), name="engineroom"),
-    path("delete_topic/(?P<module>[0-9]+)$/(?P<topic>[0-9]+)$", DeleteRowView.as_view(), name="deleterow"),
-
+    path("delete_topic/(?P<module>[0-9]+)$/(?P<topic>[0-9]+)$",
+         DeleteRowView.as_view(),
+         name="deleterow"),
 ]

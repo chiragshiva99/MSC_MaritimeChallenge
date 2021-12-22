@@ -1,6 +1,7 @@
-# DDW 2D Bonus Submission 
+# MSC Maritime Digital Challenge
+### Challenge Statement- Use Gamification to develop an interactive and engaging learning platform to on board new hires and existing employees taking on new roles. 
 
-Contributors 
+### Contributors 
 - Ankita Parashar
 - Chirag Shivakumar 
 - Devanshi Joshi

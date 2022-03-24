@@ -5,7 +5,7 @@
 - Ankita Parashar
 - Chirag Shivakumar 
 - Devanshi Joshi
-- Prachi Jayesh Suthar 
+- Suthar Prachi Jayesh  
 
 ## Run Server
 - **Step 1:** Clone

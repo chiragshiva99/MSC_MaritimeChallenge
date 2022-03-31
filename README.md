@@ -1,5 +1,5 @@
 # MSC Maritime Digital Challenge
-### Challenge Statement- Use Gamification to develop an interactive and engaging learning platform to on board new hires and existing employees taking on new roles. 
+### Challenge Statement- Use gamification to develop an interactive and engaging learning platform to on board new hires and existing employees taking on new roles. 
 
 ### Contributors 
 - Ankita Parashar
